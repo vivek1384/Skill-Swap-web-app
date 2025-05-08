@@ -1,8 +1,8 @@
 <div class="container">
     <div class="left">
-        <p>Home</p>
+        <p routerLink="/">Home</p>
         <p>Explore Skill</p>
-        <p>My Skill</p>
+        <p routerLink="/my-skill">My Skill</p>
         <p>Wallet</p>
         @if(isLogin){
         <p>{{user.name}}</p>
@@ -12,7 +12,7 @@
         }
     </div>
     <div class="right">
-        <h1>Skill Swap</h1>
+        <h1 style="font-style: italic;">Skill Swap</h1>
     </div>
 </div>
 
@@ -29,15 +29,15 @@
         }
     </div>
     <div class="right">
-        <h1>Skill Swap</h1>
+        <h1 style="font-style: italic;">Skill Swap</h1>
     </div>
 </div>
 
 @if(isMenuOpen){
 <div class="menu">
-    <p>Home</p>
+    <p routerLink="/">Home</p>
     <p>Explore Skill</p>
-    <p>My Skill</p>
+    <p routerLink="/my-skill">My Skill</p>
     <p>Wallet</p>
     @if(isLogin){
     <p>{{user.name}}</p>

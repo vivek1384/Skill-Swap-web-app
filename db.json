@@ -6,5 +6,70 @@
       "email": "vivekdudhatra13@gmail.com",
       "password": "12345678"
     }
+  ],
+  "skill": [
+    {
+      "id": "5d7a",
+      "name": "Cricket",
+      "credit": 100,
+      "userid": "8b0e",
+      "username": "Vivek Dudhatra"
+    },
+    {
+      "id": "119b",
+      "name": "Content creating",
+      "credit": 200,
+      "userid": "8b0e",
+      "username": "Vivek Dudhatra"
+    },
+    {
+      "id": "3736",
+      "name": "Angular 19",
+      "credit": 500,
+      "userid": "8b0e",
+      "username": "Vivek Dudhatra"
+    },
+    {
+      "id": "c034",
+      "name": "Type Script",
+      "credit": 300,
+      "userid": "8b0e",
+      "username": "Vivek Dudhatra"
+    },
+    {
+      "id": "baca",
+      "name": "HTML",
+      "credit": 150,
+      "userid": "8b0e",
+      "username": "Vivek Dudhatra"
+    },
+    {
+      "id": "bbfe",
+      "name": "CSS",
+      "credit": 150,
+      "userid": "8b0e",
+      "username": "Vivek Dudhatra"
+    },
+    {
+      "id": "e5c0",
+      "name": "Cooking",
+      "credit": 150,
+      "userid": "8b0e",
+      "username": "Vivek Dudhatra"
+    },
+    {
+      "id": "858c",
+      "name": "Batting Tips",
+      "credit": 250,
+      "userid": "8b0e",
+      "username": "Vivek Dudhatra"
+    },
+    {
+      "id": "8c71",
+      "name": "Java Script",
+      "credit": 300,
+      "userid": "8b0e",
+      "username": "Vivek Dudhatra"
+    }
   ]
 }

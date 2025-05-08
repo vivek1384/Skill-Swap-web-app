@@ -1,0 +1,38 @@
+<app-header />
+<div class="container">
+    <div class="top">
+        <div class="left">
+            <h1>My Skill</h1>
+        </div>
+        <div class="right">
+            <input type="text" placeholder="Search my skill..." [(ngModel)]="inputText" name="inputText"
+                (keyup)="search()">
+            <button (click)="openForm()">Add New Skill</button>
+        </div>
+    </div>
+    <div class="down">
+        @for (item of skillList2; track $index) {
+        <div class="skill">
+            <h2>Skill : {{item.name}}</h2>
+            <h4>Credits : {{item.credit}}</h4>
+            <div class="action">
+                <button>Update</button>
+                <button class="delete">Delete</button>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+@if(form){
+<div class="openForm">
+    <form>
+        <input type="text" placeholder="Skill name..." [(ngModel)]="skill.name" name="name">
+        <input type="number" placeholder="Credits..." [(ngModel)]="skill.credit" name="credit">
+        <div class="action-2">
+            <button (click)="addSkill()">Add Skill</button>
+            <button (click)="close()">Close</button>
+        </div>
+    </form>
+</div>
+}

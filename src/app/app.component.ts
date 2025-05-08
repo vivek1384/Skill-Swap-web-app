@@ -23,3 +23,18 @@ export class User {
     this.password = '';
   }
 }
+
+export class Skill {
+  id: any;
+  name: string;
+  credit: number;
+  userid: any;
+  username: string;
+  constructor() {
+    this.id = undefined;
+    this.name = '';
+    this.credit = 0;
+    this.userid = undefined;
+    this.username = '';
+  }
+}

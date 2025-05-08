@@ -1,0 +1,127 @@
+.container {
+    height: calc(100dvh - 57px);
+    background: linear-gradient(to right, rgb(220, 193, 123), rgb(248, 161, 56), rgb(220, 193, 123));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+.container .top{
+    display: flex;
+    flex-direction: row;
+    padding: 2rem 1rem;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.container .top .right{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.top .right input{
+    font-size: 18px;
+    padding: 4px;
+    padding-left: 10px;
+    border: none;
+    outline: none;
+    background: transparent;
+    border-bottom: 2px solid #000;
+}
+
+.top .right button{
+    font-size: 20px;
+    padding: 2px 16px;
+    border: 2px solid #000;
+    background: transparent;
+    cursor: pointer;
+}
+
+.container .down{
+    width: 80%;
+    /* border: 1px solid #000; */
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    align-items: start;
+    grid-auto-rows: auto;
+    gap: 1rem;
+    height: 80dvh;
+    overflow: scroll;
+    align-content: start;
+}   
+
+.down .skill{
+    border: 2px solid #000;
+    padding: 1rem;
+    border-radius: 7px;
+    height: fit-content;
+}
+
+.skill .action{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.action button{
+    font-size: 16px;
+    background: rgb(31, 74, 31);
+    padding: 4px 12px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    border: 2px solid rgb(31, 74, 31);
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.action .delete{
+    background: rgb(164, 21, 21);
+    border-color: rgb(164, 21, 21);
+}
+
+.openForm{
+    position: absolute;
+    top: 130px;
+    right: 106px;
+    width: 368px;
+    /* background: #000; */
+    backdrop-filter: blur(25px);
+    border: 2px solid #000;
+}
+
+.openForm form{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.openForm form input{
+    font-size: 18px;
+    padding: 4px;
+    padding-left: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #000;
+}
+
+.openForm form .action-2{
+    display: flex;
+}
+
+.openForm form button{
+    width: 45%;
+    margin: auto;
+    font-size: 20px;
+    background: transparent;
+    border: 2px solid #000;
+    padding: 4px;
+    cursor: pointer;
+}
