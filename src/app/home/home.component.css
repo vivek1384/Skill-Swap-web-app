@@ -48,3 +48,26 @@
 .container .bottom button:hover{
     transform: scale(1.07);
 }
+
+@media screen and (width <= 750px) {
+    .container{
+        padding: 0 1rem ;
+        background: linear-gradient(to top , rgb(220, 193, 123), rgb(248, 161, 56), rgb(220, 193, 123  ));
+        gap: 2rem;
+        height: fit-content;
+        padding: 9rem 0;
+    }
+
+    .container .top{
+        width: 90%;
+    }
+
+
+    .container .mid{
+        text-align: center;
+    }
+    
+    .container .bottom{
+        gap: 8px;
+    }
+}

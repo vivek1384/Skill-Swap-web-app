@@ -66,3 +66,12 @@ form p span {
     font-size: 17px;
     font-weight: 900;
 }
+
+@media screen and (width <= 750px) {
+    .container{
+        background: linear-gradient(to top, rgb(220, 193, 123), rgb(248, 161, 56), rgb(220, 193, 123));
+    }
+    .container .box{
+        width: 80%;
+    }    
+}

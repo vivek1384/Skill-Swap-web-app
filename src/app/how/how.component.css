@@ -27,8 +27,31 @@
     gap: 8px;
     justify-content: center;
     align-items: center;
+    transition: all ease 0.7s;
+    cursor: pointer;
+}
+
+.main .box:hover{
+    transform: translateY(-8px);
 }
 
 .main .box p {
     text-align: center;
+}
+
+@media screen and (width <= 750px) {
+
+    .container{
+        height: fit-content;
+        padding: 2rem 0;
+    }
+
+    .main{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main .box{
+        width: 80%;
+    }
 }

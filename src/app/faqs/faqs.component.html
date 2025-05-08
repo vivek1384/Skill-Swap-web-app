@@ -1,0 +1,71 @@
+<div class="container">
+    <h1>FAQs</h1>
+    <div class="main">
+        <div class="question">
+            <h1>01. How do credits work?
+                @if(!ans1){
+                <span (click)="open1()"><fa-icon [icon]="icon1"></fa-icon></span>
+                }@else {
+                <span (click)="close()"><fa-icon [icon]="icon2"></fa-icon></span>
+                }
+            </h1>
+            @if(ans1){
+            <h2>You earn credits by teaching your skills to others. You can then spend these credits to learn skills
+                from
+                other users.</h2>
+            }
+        </div>
+        <div class="question">
+            <h1>02. Can I learn without teaching anything?
+                @if(!ans2){
+                <span (click)="open2()"><fa-icon [icon]="icon1"></fa-icon></span>
+                }@else {
+                <span (click)="close()"><fa-icon [icon]="icon2"></fa-icon></span>
+                }
+            </h1>
+            @if(ans2){
+            <h2>Yes, you can! If you don’t have a skill to offer right now, you can still learn by purchasing extra
+                credits.
+            </h2>
+            }
+        </div>
+        <div class="question">
+            <h1>03. Is it free to join?
+                @if(!ans3){
+                <span (click)="open3()"><fa-icon [icon]="icon1"></fa-icon></span>
+                }@else {
+                <span (click)="close()"><fa-icon [icon]="icon2"></fa-icon></span>
+                }
+            </h1>
+            @if(ans3){
+            <h2>Yes, creating an account and browsing available skills is completely free.</h2>
+            }
+        </div>
+        <div class="question">
+            <h1>04. What kind of skills can I share or learn?
+                @if(!ans4){
+                <span (click)="open4()"><fa-icon [icon]="icon1"></fa-icon></span>
+                }@else {
+                <span (click)="close()"><fa-icon [icon]="icon2"></fa-icon></span>
+                }
+            </h1>
+            @if(ans4){
+            <h2>Anything from cooking and yoga to coding, design, or public speaking — if you can teach it, you can
+                share
+                it!</h2>
+            }
+        </div>
+        <div class="question">
+            <h1>05. Can I set my own value for my skills?
+                @if(!ans5){
+                <span (click)="open5()"><fa-icon [icon]="icon1"></fa-icon></span>
+                }@else {
+                <span (click)="close()"><fa-icon [icon]="icon2"></fa-icon></span>
+                }
+            </h1>
+            @if(ans5){
+            <h2>Yes! You decide how many credits your skill sessions are worth. </h2>
+            }
+        </div>
+    </div>
+</div>
