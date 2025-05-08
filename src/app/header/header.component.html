@@ -4,7 +4,12 @@
         <p>Explore Skill</p>
         <p>My Skill</p>
         <p>Wallet</p>
-        <p>Log In / Sign Up</p>
+        @if(isLogin){
+        <p>{{user.name}}</p>
+        <p (click)="logout()">Log out</p>
+        }@else {
+        <p routerLink="/login">Log In / Sign Up</p>
+        }
     </div>
     <div class="right">
         <h1>Skill Swap</h1>

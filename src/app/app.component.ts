@@ -1,13 +1,25 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { HomeComponent } from "./home/home.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, HomeComponent],
+  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
   title = 'skill';
+}
+
+export class User {
+  id: any;
+  name: string;
+  email: string;
+  password: string;
+  constructor() {
+    this.id = undefined;
+    this.name = '';
+    this.email = '';
+    this.password = '';
+  }
 }
