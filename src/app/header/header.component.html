@@ -15,3 +15,35 @@
         <h1>Skill Swap</h1>
     </div>
 </div>
+
+<div class="container-m">
+    <div class="left">
+        @if(isMenuOpen){
+        <span (click)="openMenu()">
+            <fa-icon [icon]="icon2"></fa-icon>
+        </span>
+        }@else {
+        <span (click)="openMenu()">
+            <fa-icon [icon]="icon1"></fa-icon>
+        </span>
+        }
+    </div>
+    <div class="right">
+        <h1>Skill Swap</h1>
+    </div>
+</div>
+
+@if(isMenuOpen){
+<div class="menu">
+    <p>Home</p>
+    <p>Explore Skill</p>
+    <p>My Skill</p>
+    <p>Wallet</p>
+    @if(isLogin){
+    <p>{{user.name}}</p>
+    <p (click)="logout()">Log out</p>
+    }@else {
+    <p routerLink="/login">Log In / Sign Up</p>
+    }
+</div>
+}

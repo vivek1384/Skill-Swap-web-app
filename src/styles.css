@@ -4,3 +4,7 @@
     padding: 0;
     font-family: "play", system-ui;
 }
+
+::-webkit-scrollbar{
+    display: none;
+}
