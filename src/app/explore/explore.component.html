@@ -26,13 +26,7 @@
 
 <div class="container">
     <div class="top">
-        <input type="text" placeholder="Search anything...">
-        <!-- <select type="text">
-            <option value="" selected disabled hidden>Select Category</option>
-            @for (item of category; track $index) {
-            <option [value]="item">{{item}}</option>
-            }
-        </select> -->
+        <input type="text" placeholder="Search anything..." [(ngModel)]="inputText" name="inputText" (keyup)="search()">
     </div>
     <div class="down">
         @if(skillList2.length == 0){
@@ -44,10 +38,10 @@
         <div class="skill">
             <h2>Skill : {{item.name}}</h2>
             <h4>Credits : {{item.credit}}</h4>
-            <!-- <div class="action">
-                <button (click)="update(item)">Update</button>
-                <button class="delete" (click)="deleteSkill(item.id)">Delete</button>
-            </div> -->
+            <h4>Posted by : {{item.username}}</h4>
+            <div class="action">
+                <button (click)="sendReq(item)">Send request</button>
+            </div>
         </div>
         }
         }

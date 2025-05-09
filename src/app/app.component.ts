@@ -16,13 +16,13 @@ export class User {
   name: string;
   email: string;
   password: string;
-  credits : number
+  credits: number;
   constructor() {
     this.id = undefined;
     this.name = '';
     this.email = '';
     this.password = '';
-    this.credits = 100
+    this.credits = 100;
   }
 }
 
@@ -38,5 +38,28 @@ export class Skill {
     this.credit = 0;
     this.userid = undefined;
     this.username = '';
+  }
+}
+
+export class Request {
+  id: any;
+  from: string;
+  fromid: any;
+  sendto: string;
+  sendtoid: any;
+  skillRequire: Skill;
+  skillOffer: Skill;
+  credits: number;
+  accept: boolean;
+  constructor() {
+    this.id = undefined;
+    this.from = '';
+    this.fromid = undefined;
+    this.sendto = '';
+    this.sendtoid = undefined;
+    this.skillRequire = new Skill();
+    this.skillOffer = new Skill();
+    this.credits = 0;
+    this.accept = false;
   }
 }

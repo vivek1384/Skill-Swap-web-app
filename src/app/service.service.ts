@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Skill, User } from './app.component';
+import { Request, Skill, User } from './app.component';
 
 @Injectable({
   providedIn: 'root',
@@ -30,7 +30,13 @@ export class ServiceService {
   deleteSkill(i: any) {
     return this.http.delete(`${this.url}skill/${i}`);
   }
-  updateSkill(i:any, d:Skill){
-    return this.http.put(`${this.url}skill/${i}`, d)
+  updateSkill(i: any, d: Skill) {
+    return this.http.put(`${this.url}skill/${i}`, d);
+  }
+  getSkillList() {
+    return this.http.get<Skill[]>(`${this.url}skill`);
+  }
+  addReq(d: Request) {
+    return this.http.post(`${this.url}request`, d);
   }
 }
