@@ -58,6 +58,10 @@
         font-size: 25px;
     }
 
+    .container-mv {
+        transition: max-width 3s ease;
+    }
+
     .menu {
         display: flex;
         flex-direction: column;
@@ -68,6 +72,7 @@
         padding: 1rem 0;
         font-size: 30px;
         height: 100dvh;
+        max-width: 100vw;
         backdrop-filter: blur(30px);
     }
 }

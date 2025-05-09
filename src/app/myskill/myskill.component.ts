@@ -3,7 +3,6 @@ import { HeaderComponent } from '../header/header.component';
 import { Skill, User } from '../app.component';
 import { FormsModule } from '@angular/forms';
 import { ServiceService } from '../service.service';
-import { using } from 'rxjs';
 
 @Component({
   selector: 'app-myskill',
@@ -32,6 +31,8 @@ export class MyskillComponent implements OnInit {
   }
   close() {
     this.form = false;
+    this.isUpdate = false;
+    this.skill = new Skill();
   }
 
   getUser() {
@@ -75,5 +76,34 @@ export class MyskillComponent implements OnInit {
       );
       console.log(this.skillList2);
     }
+  }
+
+  deleteSkill(i: any) {
+    let isDel = confirm('Are you sure?');
+    if (isDel) {
+      this.service.deleteSkill(i).subscribe((res) => {
+        if (res) {
+          this.getSkillList();
+        }
+      });
+    }
+  }
+
+  update(item: Skill) {
+    this.isUpdate = true;
+    this.form = true;
+    this.skill = item;
+  }
+
+  isUpdate = false;
+
+  updateskill(i: Skill) {
+    this.service.updateSkill(i.id, i).subscribe((res) => {
+      if (res) {
+        this.getSkillList();
+        this.isUpdate = false;
+        this.form = false;
+      }
+    });
   }
 }

@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { MyskillComponent } from './myskill/myskill.component';
+import { ExploreComponent } from './explore/explore.component';
 
 export const routes: Routes = [
   {
@@ -20,5 +21,9 @@ export const routes: Routes = [
   {
     path: 'my-skill',
     component: MyskillComponent,
+  },
+  {
+    path: 'explore',
+    component: ExploreComponent,
   },
 ];

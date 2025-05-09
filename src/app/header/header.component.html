@@ -1,9 +1,9 @@
 <div class="container">
     <div class="left">
         <p routerLink="/">Home</p>
-        <p>Explore Skill</p>
+        <p routerLink="/explore">Explore Skill</p>
         <p routerLink="/my-skill">My Skill</p>
-        <p>Wallet</p>
+        <p>Wallet (© {{user.credits}})</p>
         @if(isLogin){
         <p>{{user.name}}</p>
         <p (click)="logout()">Log out</p>
@@ -33,17 +33,19 @@
     </div>
 </div>
 
-@if(isMenuOpen){
-<div class="menu">
-    <p routerLink="/">Home</p>
-    <p>Explore Skill</p>
-    <p routerLink="/my-skill">My Skill</p>
-    <p>Wallet</p>
-    @if(isLogin){
-    <p>{{user.name}}</p>
-    <p (click)="logout()">Log out</p>
-    }@else {
-    <p routerLink="/login">Log In / Sign Up</p>
+<div class="container-mv">
+    @if(isMenuOpen){
+    <div class="menu">
+        <p routerLink="/">Home</p>
+        <p routerLink="/explore">Explore Skill</p>
+        <p routerLink="/my-skill">My Skill</p>
+        <p>Wallet (© {{user.credits}})</p>
+        @if(isLogin){
+        <p>{{user.name}}</p>
+        <p (click)="logout()">Log out</p>
+        }@else {
+        <p routerLink="/login">Log In / Sign Up</p>
+        }
+    </div>
     }
 </div>
-}

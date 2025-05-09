@@ -27,4 +27,10 @@ export class ServiceService {
   getSkillListUserId(i: any) {
     return this.http.get<Skill[]>(`${this.url}skill?userid=${i}`);
   }
+  deleteSkill(i: any) {
+    return this.http.delete(`${this.url}skill/${i}`);
+  }
+  updateSkill(i:any, d:Skill){
+    return this.http.put(`${this.url}skill/${i}`, d)
+  }
 }

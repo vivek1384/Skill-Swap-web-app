@@ -1,0 +1,55 @@
+<app-header />
+<!--    
+    <input type="text" formControlName="name">
+    @if(userForm.get('name')?.invalid && (userForm.get('name').touched || userForm.get('name').dirty)){
+    @if(userForm.get('name').errors?.['required']){
+    <div>
+        <p>Error</p>
+    </div>
+    }
+    }
+    <input type="text" formControlName="password">
+    @if(userForm.get('password')?.invalid && (userForm.get('password').touched || userForm.get('password').dirty)){
+    @if(userForm.get('password').errors?.['required']){
+    <div>
+        <p>Required error</p>
+    </div>
+    }@else if(userForm.get('password').errors?.['pattern']){
+    <div>
+        <p>Pattern error</p>
+    </div>
+    }
+
+    }
+    <button (click)="button()" [disabled]='userForm.invalid'>Submit</button>
+</form> -->
+
+<div class="container">
+    <div class="top">
+        <input type="text" placeholder="Search anything...">
+        <!-- <select type="text">
+            <option value="" selected disabled hidden>Select Category</option>
+            @for (item of category; track $index) {
+            <option [value]="item">{{item}}</option>
+            }
+        </select> -->
+    </div>
+    <div class="down">
+        @if(skillList2.length == 0){
+        <div class="skill">
+            <h4>No skill found. <span>Create new one.</span></h4>
+        </div>
+        }@else {
+        @for (item of skillList2; track $index) {
+        <div class="skill">
+            <h2>Skill : {{item.name}}</h2>
+            <h4>Credits : {{item.credit}}</h4>
+            <!-- <div class="action">
+                <button (click)="update(item)">Update</button>
+                <button class="delete" (click)="deleteSkill(item.id)">Delete</button>
+            </div> -->
+        </div>
+        }
+        }
+    </div>
+</div>

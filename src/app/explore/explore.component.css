@@ -1,0 +1,84 @@
+.container {
+    height: calc(100dvh - 57px);
+    background: linear-gradient(to right, rgb(220, 193, 123), rgb(248, 161, 56), rgb(220, 193, 123));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 2rem;
+    gap: 2rem;
+}
+
+.container .top{
+    display: flex;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.container .top select, .container .top input{
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #000;
+    padding: 4px;
+    padding-left: 12px;
+}
+
+.container .down {
+    width: 80%;
+    /* border: 1px solid #000; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: start;
+    grid-auto-rows: auto;
+    gap: 1rem;
+    height: 80dvh;
+    overflow: scroll;
+    align-content: start;
+}
+
+.down .skill {
+    border: 2px solid #000;
+    padding: 1rem;
+    border-radius: 7px;
+    height: fit-content;
+}
+
+.skill .action {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.action button {
+    font-size: 16px;
+    background: rgb(31, 74, 31);
+    padding: 4px 12px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    border: 2px solid rgb(31, 74, 31);
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.action .delete {
+    background: rgb(164, 21, 21);
+    border-color: rgb(164, 21, 21);
+}
+
+
+@media screen and (width <=750px) {
+    .container .down {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        width: 90%;
+    }
+
+    .container .down .skill {
+        width: 85%;
+    }
+}

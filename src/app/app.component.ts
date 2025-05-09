@@ -16,11 +16,13 @@ export class User {
   name: string;
   email: string;
   password: string;
+  credits : number
   constructor() {
     this.id = undefined;
     this.name = '';
     this.email = '';
     this.password = '';
+    this.credits = 100
   }
 }
 
