@@ -50,7 +50,7 @@ export class Request {
   skillRequire: Skill;
   skillOffer: Skill;
   credits: number;
-  accept: boolean;
+  accept: string;
   constructor() {
     this.id = undefined;
     this.from = '';
@@ -60,6 +60,7 @@ export class Request {
     this.skillRequire = new Skill();
     this.skillOffer = new Skill();
     this.credits = 0;
-    this.accept = false;
+    this.accept = 'Pending';
   }
 }
+  

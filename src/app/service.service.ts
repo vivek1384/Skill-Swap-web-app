@@ -39,4 +39,19 @@ export class ServiceService {
   addReq(d: Request) {
     return this.http.post(`${this.url}request`, d);
   }
+  reqSent(id: any) {
+    return this.http.get<Request[]>(`${this.url}request?fromid=${id}`);
+  }
+  reqCome(id: any) {
+    return this.http.get<Request[]>(`${this.url}request?sendtoid=${id}`);
+  }
+  deleteReq(id: any) {
+    return this.http.delete(`${this.url}request/${id}`);
+  }
+  editUser(id: any, d: User) {
+    return this.http.put(`${this.url}user/${id}`, d);
+  }
+  editRequest(id: any, d: Request) {
+    return this.http.put(`${this.url}request/${id}`, d);
+  }
 }

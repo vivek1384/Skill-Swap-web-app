@@ -1,0 +1,77 @@
+<app-header />
+
+<div class="container">
+    <div class="left">
+        <h1>Request sent</h1>
+        <div class="grid">
+            @if(requestListSent.length == 0){
+            <div class="request">
+                <h2>No request has been sent by you.</h2>
+            </div>
+            }@else{
+            @for(item of requestListSent; track $index){
+            <div class="request">
+                <h2>Skill Request : {{item.skillRequire.name}}</h2>
+                <h2>Request sent to : {{item.sendto}}</h2>
+                <h2>Credit : {{item.skillRequire.credit}}</h2>
+                <h2>Status : {{item.accept}}</h2>
+                @if(item.accept == 'Pending'){
+                <div class="action">
+                    <button (click)="deleteBySender(item.id)">Delete Request</button>
+                </div>
+                }@else if(item.accept == 'Accepted' && item.skillOffer.name != ''){
+                <h2>Accepted with skill : {{item.skillOffer.name}}</h2>
+                <h2>Accepted skill's credits : {{item.skillOffer.credit}}</h2>
+                }
+            </div>
+            }
+            }
+        </div>
+    </div>
+    <div class="right">
+        <h1>Request Comes</h1>
+        <div class="grid">
+            @if(requestListCome.length == 0){
+            <div class="request">
+                <h2>No request comes in your skill.</h2>
+            </div>
+            }@else{
+            @for(item of requestListCome; track $index){
+            <div class="request">
+                <h2>Skill Require : {{item.skillRequire.name}}</h2>
+                <h2>Credit : {{item.skillRequire.credit}}</h2>
+                <h2>request From : {{item.from}}</h2>
+                @if(item.accept == 'Accepted'){
+                <h2>Accepted.</h2>
+                @if(item.skillOffer.name != ''){
+                <h2>Swap with : {{item.skillOffer.name}}</h2>
+                <h2>Swap credit : {{item.skillOffer.credit}}</h2>
+                }
+                }@else if(item.accept == 'Declined'){
+                <h2>Declined.</h2>
+                }@else{
+                <div class="action">
+                    <button (click)="acceptWithSkill(item, item.from)">Accept with skill swap</button>
+                    <button>Accept withut skill swap</button>
+                    <button>Decline</button>
+                </div>
+                }
+            </div>
+            }
+            }
+        </div>
+    </div>
+</div>
+
+@if(skillOpen){
+<div class="skills">
+    <h1>{{fromName}}'s Skill : <span><fa-icon [icon]="icon" (click)="close()"></fa-icon></span></h1>
+    @for(item of requestList3; track $index){
+    <div class="skill">
+        <h2>Skill Name : {{item.name}}</h2>
+        <h2>Credit Require : {{item.credit}}</h2>
+        <button (click)="onContinue(item)">Continue with this skill</button>
+    </div>
+    }
+</div>
+}

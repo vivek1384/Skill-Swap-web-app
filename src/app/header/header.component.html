@@ -3,9 +3,13 @@
         <p routerLink="/">Home</p>
         <p routerLink="/explore">Explore Skill</p>
         <p routerLink="/my-skill">My Skill</p>
-        <p>Wallet (© {{user.credits}})</p>
         @if(isLogin){
-        <p>{{user.name}}</p>
+        <p routerLink="/wallet">Wallet (© {{user.credits}})</p>
+        }@else {
+        <p>Wallet (© 0)</p>
+        }
+        @if(isLogin){
+        <p routerLink="/profile">{{user.name}}</p>
         <p (click)="logout()">Log out</p>
         }@else {
         <p routerLink="/login">Log In / Sign Up</p>
@@ -39,9 +43,13 @@
         <p routerLink="/">Home</p>
         <p routerLink="/explore">Explore Skill</p>
         <p routerLink="/my-skill">My Skill</p>
-        <p>Wallet (© {{user.credits}})</p>
         @if(isLogin){
-        <p>{{user.name}}</p>
+        <p routerLink="/wallet">Wallet (© {{user.credits}})</p>
+        }@else {
+        <p>Wallet (© 0)</p>
+        }
+        @if(isLogin){
+        <p routerLink="/profile">{{user.name}}</p>
         <p (click)="logout()">Log out</p>
         }@else {
         <p routerLink="/login">Log In / Sign Up</p>

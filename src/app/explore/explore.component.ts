@@ -74,21 +74,25 @@ export class ExploreComponent implements OnInit {
   }
 
   sendReq(d: Skill) {
-    this.request.from = this.user.name;
-    this.request.fromid = this.user.id;
-    this.request.skillRequire = d;
-    this.request.sendto = d.username;
-    this.request.sendtoid = d.userid;
-    let isCon = confirm('Are you sure?');
-    if (isCon) {
-      if (d.credit <= this.user.credits) {
-        this.service.addReq(this.request).subscribe((res) => {
-          if (res) {
-            console.log('Hello');
-          }
-        });
-      } else {
-        alert(`You should minimum have ${d.credit} credits.`);
+    if (d.userid == this.user.id) {
+      alert("You can't send request yourself.");
+    } else {
+      this.request.from = this.user.name;
+      this.request.fromid = this.user.id;
+      this.request.skillRequire = d;
+      this.request.sendto = d.username;
+      this.request.sendtoid = d.userid;
+      let isCon = confirm('Are you sure?');
+      if (isCon) {
+        if (d.credit <= this.user.credits) {
+          this.service.addReq(this.request).subscribe((res) => {
+            if (res) {
+              console.log('Hello');
+            }
+          });
+        } else {
+          alert(`You should minimum have ${d.credit} credits.`);
+        }
       }
     }
   }

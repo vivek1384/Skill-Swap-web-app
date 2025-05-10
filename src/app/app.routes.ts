@@ -3,6 +3,8 @@ import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { MyskillComponent } from './myskill/myskill.component';
 import { ExploreComponent } from './explore/explore.component';
+import { WalletComponent } from './wallet/wallet.component';
+import { ProfileComponent } from './profile/profile.component';
 
 export const routes: Routes = [
   {
@@ -25,5 +27,13 @@ export const routes: Routes = [
   {
     path: 'explore',
     component: ExploreComponent,
+  },
+  {
+    path: 'wallet',
+    component: WalletComponent,
+  },
+  {
+    path: 'profile',
+    component: ProfileComponent,
   },
 ];
